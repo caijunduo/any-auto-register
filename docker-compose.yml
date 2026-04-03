@@ -20,9 +20,6 @@ services:
       PLAYWRIGHT_HEADLESS: ${PLAYWRIGHT_HEADLESS:-}
     ports:
       - "${APP_PORT:-8000}:8000"
-      - "${SOLVER_PORT_HOST:-8889}:8889"
-      - "${CLIPROXYAPI_PORT:-8317}:8317"
-      - "${GROK2API_PORT:-8011}:8011"
     volumes:
       - ${APP_RUNTIME_BIND:-./data}:/runtime
       - ${APP_EXT_TARGETS_BIND:-./_ext_targets}:/_ext_targets
