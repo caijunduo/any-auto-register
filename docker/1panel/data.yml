@@ -1,0 +1,22 @@
+name: Any Auto Register
+tags:
+  - Tool
+title: Any Auto Register
+description: Multi-platform account auto-registration and management system with plugin support
+additionalProperties:
+  key: any-auto-register
+  name: Any Auto Register
+  tags:
+    - Tool
+  shortDescZh: 多平台账号自动注册与管理系统，支持插件化扩展
+  shortDescEn: Multi-platform account auto-registration and management system with plugin support
+  description:
+    en: Multi-platform account auto-registration and management system, supporting plugin extensions, Web UI, batch registration, and local Turnstile Solver.
+    zh: 多平台账号自动注册与管理系统，支持插件化扩展、Web UI 管理、批量注册、状态同步，以及本地 Turnstile Solver 自动拉起。
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://github.com/caijunduo/any-auto-register
+  github: https://github.com/caijunduo/any-auto-register
+  document: https://github.com/caijunduo/any-auto-register/blob/main/README.md

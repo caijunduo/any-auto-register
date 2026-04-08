@@ -1,0 +1,31 @@
+networks:
+    1panel-network:
+        external: true
+services:
+    any-auto-register:
+        image: registry.cn-shenzhen.aliyuncs.com/caijunduo/any-auto-register:latest
+        container_name: ${CONTAINER_NAME}
+        restart: unless-stopped
+        init: true
+        shm_size: "${SHM_SIZE:-1gb}"
+        networks:
+          - 1panel-network
+        ports:
+          - "${PORT:-8000}:${PORT:-8000}"
+        volumes:
+          - ${APP_RUNTIME_DIR:-./data/runtime}:/runtime
+          - ${APP_EXT_TARGETS_DIR:-./data/ext_targets}:/_ext_targets
+        environment:
+          HOST: 0.0.0.0
+          PORT: "${PORT:-8000}"
+          APP_RELOAD: "0"
+          APP_CONDA_ENV: docker
+          APP_RUNTIME_DIR: /runtime
+          APP_ENABLE_SOLVER: "1"
+          SOLVER_PORT: "8889"
+          SOLVER_BIND_HOST: 0.0.0.0
+          LOCAL_SOLVER_URL: http://127.0.0.1:8889
+          SOLVER_BROWSER_TYPE: ${SOLVER_BROWSER_TYPE:-camoufox}
+          PLAYWRIGHT_HEADLESS: ${PLAYWRIGHT_HEADLESS:-}
+        labels:
+          createdBy: Apps

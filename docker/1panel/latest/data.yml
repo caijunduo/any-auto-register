@@ -1,0 +1,68 @@
+additionalProperties:
+  formFields:
+    - default: "8000"
+      envKey: PORT
+      labelEn: Web Port
+      labelZh: Web 服务端口
+      label:
+        en: Web Port
+        zh: Web 服务端口
+      required: true
+      type: number
+    - default: "camoufox"
+      envKey: SOLVER_BROWSER_TYPE
+      labelEn: Solver Browser Type
+      labelZh: Solver 浏览器类型
+      label:
+        en: Solver Browser Type
+        zh: Solver 浏览器类型
+      required: false
+      type: select
+      values:
+        - label: Camoufox
+          value: "camoufox"
+        - label: Chromium
+          value: "chromium"
+    - default: ""
+      envKey: PLAYWRIGHT_HEADLESS
+      labelEn: Playwright Headless
+      labelZh: 无头模式运行浏览器
+      label:
+        en: Playwright Headless
+        zh: 无头模式运行浏览器
+      required: false
+      type: select
+      values:
+        - label: "Default"
+          value: ""
+        - label: "true"
+          value: "true"
+        - label: "false"
+          value: "false"
+    - default: "8317"
+      envKey: CLIPROXYAPI_PORT
+      labelEn: CLI Proxy API Port
+      labelZh: CLI Proxy API 端口
+      label:
+        en: CLI Proxy API Port
+        zh: CLI Proxy API 端口
+      required: false
+      type: number
+    - default: "8011"
+      envKey: GROK2API_PORT
+      labelEn: Grok2API Port
+      labelZh: Grok2API 端口
+      label:
+        en: Grok2API Port
+        zh: Grok2API 端口
+      required: false
+      type: number
+    - default: "1gb"
+      envKey: SHM_SIZE
+      labelEn: Shared Memory Size
+      labelZh: 共享内存大小
+      label:
+        en: Shared Memory Size
+        zh: 共享内存大小
+      required: false
+      type: text
